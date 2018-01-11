@@ -1,6 +1,6 @@
 # Udacity Data Analyst Nanodegree
 Career development projects part of the Udacity Data Analyst Nanodegree curriculum.
-## C1 [Data Analyst Interview Practice]()
+## C1 [Data Analyst Interview Practice](./projects/c1/dand-c1-interview-practice.md)
 _This project introduces you to common types of questions you’ll encounter during an in-person interview. Develop a healthier, more confident mindset around your qualifications as a candidate._
 
 __Completion time.__
