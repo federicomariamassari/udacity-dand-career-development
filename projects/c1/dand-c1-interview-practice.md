@@ -1,4 +1,5 @@
 # Data Analyst Nanodegree: C1 Interview Practice
+__Federico Maria Massari / federico.massari@bocconialumni.it__
 
 ## Question 2
 _You are given a **ten-piece** box of chocolate truffles. You know based on the label that six of the pieces have an orange cream filling and four of the pieces have a coconut filling. If you were to eat four pieces in a row, what is the probability that the **first two** pieces you eat have an orange cream filling and the **last two** have a coconut filling?_
