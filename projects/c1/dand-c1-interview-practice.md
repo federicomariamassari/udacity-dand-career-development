@@ -50,7 +50,8 @@ def pick_sequence(*args, permutation=False):
     from scipy import special
 
     # Initialise variables to sum (0) and multiply (1)
-    box, pick, desired, total = 0, 0, 1, 1
+    box, pick = 0,0
+    desired, total = 1, 1
 
     for e in args:
         box += e.N    # Total truffles in the box
