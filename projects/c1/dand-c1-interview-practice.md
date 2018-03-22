@@ -123,11 +123,20 @@ _construct a query to find the **top five states** with the **highest number of 
 ### Answer
 A possible solution to the problem could be this:
 ```sql
-SELECT state, count(active) AS num_active_users
+SELECT state, sum(active) AS num_active_users
 FROM users
 GROUP BY state
 ORDER BY num_active_users DESC
 LIMIT 5;
 ```
+The query groups entries by variable `state` and sums the corresponding values in column `active` to obtain the number of active users for each state. A simple sum is enough because the variable is Boolean (0: non-active user; 1: active user). The output is sorted in descending order, and only the top five values are displayed.
 
 ## Question 4
+_Define a function `first_unique` that takes a string as input and returns the first non-repeated (unique) character in the input string. If there are no unique characters return `None`._
+
+### Answer
+```python
+def first_unique(string):
+
+    return unique_char
+```
