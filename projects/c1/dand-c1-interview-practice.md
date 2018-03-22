@@ -137,6 +137,21 @@ _Define a function `first_unique` that takes a string as input and returns the f
 ### Answer
 ```python
 def first_unique(string):
+    """Return the first unique character of a non-fully-numeric string.
+
+    Arguments:
+        string -- str. The input string.
+
+    Returns:
+        str. The first non-repeated character of a string unless the latter
+        is fully numeric. In that case, return None.
+    """
+    if string.isdigit():
+        return None
+
+    # Simply return the non-digit string of length one
+    elif len(string) == 1:
+        return string
 
     return unique_char
 ```
