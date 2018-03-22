@@ -89,3 +89,45 @@ pick_sequence(orange_cream, coconut)
 ```
 0.42857142857142855
 ```
+
+## Question 3
+_Given the table `users`:_
+
+```
+Table "users"
++-------------+-----------+
+| Column      | Type      |
++-------------+-----------+
+| id          | integer   |
+| username    | character |
+| email       | character |
+| city        | character |
+| state       | character |
+| zip         | integer   |
+| active      | boolean   |
++-------------+-----------+
+```
+_construct a query to find the **top five states** with the **highest number of active users**. Include the number for each state in the query result. Example result:_
+```
++------------+------------------+
+| state      | num_active_users |
++------------+------------------+
+| New Mexico | 502              |
+| Alabama    | 495              |
+| California | 300              |
+| Maine      | 201              |
+| Texas      | 189              |
++------------+------------------+
+```
+
+### Answer
+A possible solution to the problem could be this:
+```sql
+SELECT state, count(active) AS num_active_users
+FROM users
+GROUP BY state
+ORDER BY num_active_users DESC
+LIMIT 5;
+```
+
+## Question 4
