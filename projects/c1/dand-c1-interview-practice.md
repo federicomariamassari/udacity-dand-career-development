@@ -154,6 +154,19 @@ def first_unique(string):
         return string
 
     else:
+        # Find the set of all characters in the string
+        uniques = set(string)
 
-        return unique_char
+        try:
+            # Map unique, non-digit characters to their position inside the
+            # string using dictionary comprehension
+            mapping = {e: string.find(e) for e in uniques
+                       if string.count(e) == 1 and not e.isdigit()}
+
+            # Return unique character with smallest position index
+            return string[min([mapping[i] for i in mapping])]
+
+        except ValueError:
+            # Rule out strings with non-unique characters
+            return None
 ```
