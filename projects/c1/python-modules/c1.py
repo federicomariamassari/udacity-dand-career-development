@@ -55,3 +55,40 @@ def pick_sequence(*args, permutation=False):
         total = special.comb(box, pick)
 
     return desired / total
+
+"""QUESTION 4
+"""
+
+def first_unique(string):
+    """Return the first unique character of a non-fully-numeric string.
+
+    Arguments:
+        string -- str. The input string.
+
+    Returns:
+        str. The first non-repeated character of a string unless the latter
+        is fully numeric. In that case, return None.
+    """
+    if string.isdigit():
+        return None
+
+    # Simply return the non-digit string of length one
+    elif len(string) == 1:
+        return string
+
+    else:
+        # Find the set of all characters in the string
+        uniques = set(string)
+
+        try:
+            # Map unique, non-digit characters to their position inside the
+            # string using dictionary comprehension
+            mapping = {e: string.find(e) for e in uniques
+                       if string.count(e) == 1 and not e.isdigit()}
+
+            # Return unique character with smallest position index
+            return string[min([mapping[i] for i in mapping])]
+
+        except ValueError:
+            # Rule out strings with non-unique characters
+            return None
