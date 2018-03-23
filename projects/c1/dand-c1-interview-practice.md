@@ -153,5 +153,7 @@ def first_unique(string):
     elif len(string) == 1:
         return string
 
-    return unique_char
+    else:
+        
+        return unique_char
 ```
