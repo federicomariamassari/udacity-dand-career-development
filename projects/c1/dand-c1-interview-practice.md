@@ -124,10 +124,10 @@ _construct a query to find the **top five states** with the **highest number of 
 A possible solution to the problem could be this:
 ```sql
 SELECT state, sum(active) AS num_active_users
-FROM users
-GROUP BY state
-ORDER BY num_active_users DESC
-LIMIT 5;
+    FROM users
+    GROUP BY state
+    ORDER BY num_active_users DESC
+        LIMIT 5;
 ```
 The query groups entries by variable `state` and sums the corresponding values in column `active` to obtain the number of active users for each state. A simple sum is enough because the variable is Boolean (0: non-active user; 1: active user). The output is sorted in descending order, and only the top five values are displayed.
 
@@ -154,6 +154,6 @@ def first_unique(string):
         return string
 
     else:
-        
+
         return unique_char
 ```
