@@ -129,7 +129,9 @@ SELECT state, sum(active) AS num_active_users
     ORDER BY num_active_users DESC
         LIMIT 5;
 ```
-The query groups entries by variable `state` and sums the corresponding values in column `active` to obtain the number of active users for each state. A simple sum is enough because the variable is Boolean (0: non-active user; 1: active user). The output is sorted in descending order, and only the top five values are displayed.
+
+### Explanation
+First, the query takes table `users` and groups its entries by variable `state`. Then, it sums the corresponding values in column `active` (using an alias) to obtain the number of active users for each state. A simple sum is enough, in this case, because the variable is Boolean (0: non-active user; 1: active user). Finally, the output is sorted in descending order, and only the top five values, together with the state they relate to, are displayed.
 
 ## Question 4
 _Define a function `first_unique` that takes a string as input and returns the first non-repeated (unique) character in the input string. If there are no unique characters return `None`._
@@ -170,3 +172,12 @@ def first_unique(string):
             # Rule out strings with non-unique characters
             return None
 ```
+
+### Explanation
+To minimise execution time, the function preliminary checks whether the string is fully numeric, and if not, whether it has length one. In the first case, the function returns None; in the second, the string itself. Length is tested second, to avoid one-digit strings (e.g., '1') as output.
+
+The bulk of the code is run if these conditions do not apply. First, the function generates the set of characters in the string, including numbers (which are filtered out in the next step). Then, using dictionary comprehension, it maps each character to the position it is first found inside the string, but only if the character is unique (i.e., count equal to 1) and not a digit. Strings with no unique characters (e.g., 'aa') would break the algorithm at this point, hence the code is placed inside a _try-except_ block. Finally, the function transverses the dictionary, and returns the unique character whose position index is smallest. If an exception is raised (i.e., no unique character in the string), the function returns None.
+
+__Time complexity.__ The algorithm should take, on average, _linear time_ O(n). The best case would be _constant time_ O(1), if the input string (either numeric or character) has length 1. The worst case would be _linear time_ O(3n), if the input string is a sequence of unique characters: in this situation, `set` would not decrease its length, and both dictionary comprehension and the minimum operator would have to cross the original string in its entirety.
+
+__Space complexity.__ Apart from the best case scenario, in which either None or the input string are returned, the algorithm creates two intermediate variables, `uniques` and `mapping`. At worst, these have, respectively, the same and twice (the dictionary also stores the position index) the length of the original string. While maximum space complexity can be O(4n), on average it should be O(2n), if input is included in the computation. Approximate space complexity is O(n).
