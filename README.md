@@ -1,5 +1,8 @@
 # Udacity Data Analyst Nanodegree
 Career development projects part of the Udacity Data Analyst Nanodegree curriculum.
+
+__Associated repositories:__ [_Data Analyst Nanodegree_](https://github.com/federicomariamassari/udacity-dand)
+
 ## C1 [Data Analyst Interview Practice](./projects/c1/dand-c1-interview-practice.md)
 ★ This project features the most elegant code I have written to date.
 
