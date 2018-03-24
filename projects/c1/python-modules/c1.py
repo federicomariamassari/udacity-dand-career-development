@@ -6,9 +6,8 @@ This module contains all the code for Udacity Career Development Project C1.
 Requires Python 3.
 """
 
-"""QUESTION 2
+"""ANSWER TO QUESTION 2
 """
-
 class Truffle:
     """Create an instance for a truffle with a particular filling.
 
@@ -56,9 +55,8 @@ def pick_sequence(*args, permutation=False):
 
     return desired / total
 
-"""QUESTION 4
+"""ANSWER TO QUESTION 4
 """
-
 def first_unique(string):
     """Return the first unique character of a non-fully-numeric string.
 
