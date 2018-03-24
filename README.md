@@ -1,6 +1,8 @@
 # Udacity Data Analyst Nanodegree
 Career development projects part of the Udacity Data Analyst Nanodegree curriculum.
 ## C1 [Data Analyst Interview Practice](./projects/c1/dand-c1-interview-practice.md)
+★ This project features the most elegant code I have written to date.
+
 __Languages:__ Python, SQL
 
 __Completion time:__ NA
