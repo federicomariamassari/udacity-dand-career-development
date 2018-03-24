@@ -143,8 +143,8 @@ def first_unique(string):
         string -- str. The input string.
 
     Returns:
-        str. The first non-repeated character of a string unless the latter
-        is fully numeric. In that case, return None.
+        str. The first non-repeated character of a string, unless the latter
+        is fully numeric or has no uniques. In those cases, return None.
     """
     if string.isdigit():
         return None
