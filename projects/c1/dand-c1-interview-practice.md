@@ -5,7 +5,9 @@ __Federico Maria Massari / federico.massari@bocconialumni.it__
 _Describe a data project you worked on recently._
 
 ### Answer
+I recently worked on a project that involved analysing geospatial data from OpenStreetMap, a collaborative effort to create a free, editable map of the world. The data, an XML document with extension OSM, referred to the city of Milan, Italy, and its surrounding areas.
 
+The aim of the project was twofold: on the one hand, to detect how "dirty" the OSM file was (i.e., how much information unrelated to Milan and its province it contained), as well as to suggest ways to programmatically clean it; on the other, to determine the size of the Milan OpenStreetMap community, and to come up with ideas on how to increase the user base and make the overall experience more compelling.
 
 ## Question 2
 _You are given a **ten-piece** box of chocolate truffles. You know based on the label that six of the pieces have an orange cream filling and four of the pieces have a coconut filling. If you were to eat four pieces in a row, what is the probability that the **first two** pieces you eat have an orange cream filling and the **last two** have a coconut filling?_
