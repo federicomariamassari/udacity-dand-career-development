@@ -5,9 +5,11 @@ __Federico Maria Massari / federico.massari@bocconialumni.it__
 _Describe a data project you worked on recently._
 
 ### Answer
-I recently worked on a project that involved analysing geospatial data from OpenStreetMap, a collaborative effort to create a free, editable map of the world. The data, an XML document with extension OSM, referred to the city of Milan, Italy, and its surrounding areas.
+I recently worked on a project that involved analysing geospatial data from OpenStreetMap, a collaborative effort to create a free, editable map of the world. The data, an XML document with extension OSM, related to the city of Milan, Italy, and its surrounding areas.
 
-The aim of the project was twofold: on the one hand, to detect how "dirty" the OSM file was (i.e., how much information unrelated to Milan and its province it contained), as well as to suggest ways to programmatically clean it; on the other, to determine the size of the Milan OpenStreetMap community, and to come up with ideas on how to increase the user base and make the overall experience more compelling.
+The aim of the project was twofold: on the one hand, to detect how "dirty" the OSM file was (i.e., how much information unrelated to Milan and its province it had), and to suggest ways to programmatically clean it; on the other, to determine the size of the Milan OpenStreetMap community, and to come up with ideas on how to increase the user base and make the overall experience more compelling.
+
+The first task required to download, audit, and clean the OSM file, write its updated entries on CSV documents, create and populate a SQL database, and finally query the database for exploration. I started by fetching the data using Requests (an HTTP library for Python), and by auditing them with ElementTree (an XML parser) and regular expressions. Auditing helped me spot a few irregularities (most notably in street names and postal codes) which I then fixed via custom mappings. Once the data were clean, I shaped them into normalised tables, wrote such tables to CSV files, and imported the latter in SQL. 
 
 ## Question 2
 _You are given a **ten-piece** box of chocolate truffles. You know based on the label that six of the pieces have an orange cream filling and four of the pieces have a coconut filling. If you were to eat four pieces in a row, what is the probability that the **first two** pieces you eat have an orange cream filling and the **last two** have a coconut filling?_
