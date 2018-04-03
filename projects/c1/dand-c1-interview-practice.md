@@ -197,3 +197,13 @@ The bulk of the code is run if these conditions do not apply. First, the functio
 __Time complexity.__ The algorithm should take, on average, _linear time_ O(n). The best case would be analogous to _constant time_ O(1), if the input string (either numeric or character) has length 1. The worst case would be _linear time_ O(3n), if the input string is a sequence of unique characters: in this situation, `set` would not decrease its length, and both dictionary comprehension and the minimum operator would have to cross the original string in its entirety.
 
 __Space complexity.__ Apart from the best case scenario, in which either None or the input string are returned, the algorithm creates two intermediate variables, `uniques` and `mapping`. At worst, these have, respectively, the same and twice (the dictionary also stores the position index) the length of the original string. While maximum space complexity can be O(4n), on average it should be O(2n), if input is included in the computation. Approximate space complexity is O(n).
+
+## Question 5
+_What are **underfitting** and **overfitting** in the context of Machine Learning? How might you balance them?_
+
+### Answer
+
+## Question 6
+_If you were to start your data analyst position today, what would be your goals a year from now?_
+
+### Answer
