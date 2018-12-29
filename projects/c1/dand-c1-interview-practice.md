@@ -1,5 +1,5 @@
 # Data Analyst Nanodegree: C1 Interview Practice
-__Federico Maria Massari / federico.massari@bocconialumni.it__
+__Federico Maria Massari__
 
 ## Question 1
 _Describe a data project you worked on recently._
@@ -202,6 +202,20 @@ __Space complexity.__ Apart from the best case scenario, in which either None or
 _What are **underfitting** and **overfitting** in the context of Machine Learning? How might you balance them?_
 
 ### Answer
+Underfitting occurs when a model is so simple that it both cannot learn the structure of the training data and generalise adequately on the test data. Overfitting happens when a model learns the training data so well (it takes them so literally) that it performs poorly on new, unseen data. To reduce underfitting, one can select a more complex model with a wider set of parameters, input better features into the algorithm, or relax the imposed constraints (i.e., by decreasing regularisation) allowing for more degrees of freedom [1]. To prevent overfitting, one can instead simplify the model used, get additional training data, or make the training data less noisy by removing outliers.
+
+One way to balance between under- and overfitting is to fine tune the hyperparameters of a model. For example, support vector machines, a powerful supervised learning algorithm, has three key parameters: _C_ governs the trade-off between getting a smooth decision surface and correctly classifying all test data points, _gamma_ defines whether only the closest points or also farther ones affect the boundary construction, and _kernel_ may help discover unintuitive patterns in the data.
+
+```python
+from sklearn.svm import SVC
+
+# Fine tune hyperparameters when building a classifier
+clf = SVC(C=1.0, gamma='scale', kernel='rbf')
+```
+
+Higher values for _C_ and _gamma_, and a more complex kernel (e.g., radial basis function) avoid underfitting but make the algorithm prone to overfitting; lower values for _C_ and _gamma_, and a simpler kernel (e.g., linear) have the opposite effect. The difficulty in minimising both sources of error is known as the _bias-variance dilemma_. Choosing the right model for the problem at hand, and optimally fine-tuning its hyperparameters is more art than science.
+
+[1] Géron, A. (2017): [_Hands-on Machine Learning with Scikit-Learn & TensorFlow_](http://shop.oreilly.com/product/0636920052289.do), O'Reilly.
 
 ## Question 6
 _If you were to start your data analyst position today, what would be your goals a year from now?_
